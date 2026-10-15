@@ -9,8 +9,8 @@ class Test_password_valdiator(unittest.TestCase):
     def test_password_isString(self):
         self.assertIsInstance(password_checker("kgomotso"), str)
 
-    def test_password_isAtleast_8chars(self):
-        pass
+    # def test_password_isAtleast_8chars(self):
+    #     pass
 
 
 

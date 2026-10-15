@@ -18,10 +18,21 @@ def password_checker(password):
         return None
     
     elif not password or  not isinstance(password, str):
-        raise TypeError("Wrong_data_type: Enclose the sequence of characters with \" \"")
+        return TypeError("Wrong_data_type: Enclose the sequence of characters with \" \".")
+    
+    elif isInstance(password, str):
+        #Check conditions
+        elif len(password) < 8:
+            print("Password is too short")
+            return "Password too short"
+        else:
+            for char in password:
+                if char.lower() in password and char.upper() in password:
+                    if char.isdigit in password:
+                        return
+                    else:
+                        print("")
+                else:
+                    print("Your passweord i either missing an uppercase or lowercase charcater")
 
-    #Check conditions
-    elif len(password) < 8:
-        return "Password too short"
-
-password_checker("Kohgu5")
+password_checker("kgomotso")
